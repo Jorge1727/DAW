@@ -44,6 +44,7 @@ public class estadistica_IES
             System.out.println("La suma de las edades es: "+ sumaEdades + "\nMedia es: " + media);
             System.out.println("Total de alumnos: " + totalAlumnos + "\nLos mayores de 18 son: " + mayoresEdad);
             System.out.println("cambio en vstudio");//cambio
+            //cambio desde github
         }
     }    
 }
