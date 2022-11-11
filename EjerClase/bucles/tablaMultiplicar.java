@@ -24,5 +24,6 @@ public class tablaMultiplicar
                 System.out.println(tabla + " * " + i + " = " + (i * tabla));
             }
         }
+        System.out.println("hola otra vez");
     }    
 }
