@@ -12,9 +12,6 @@ public class ej26
         int position = sc.nextInt();
         sc.close();
 
-        int cont = 0;
-
-        int primerNum =  num;//para saber cual era el primer numero para el ult sout
         int vuelta = 0;
 
         while(num > 0)
@@ -22,11 +19,15 @@ public class ej26
             vuelta = (vuelta * 10) + (num % 10);
             num /= 10;
         }
+        System.out.println(vuelta);
 
-        while(vuelta != 1)
+        while(vuelta >= 1)
         {
             if((vuelta % 10) == position)
                 System.out.print(position + " ");
+            
+            vuelta /= 10;
+            position++;
         }
     }    
 }

@@ -17,12 +17,12 @@ public class ej18
 
         if(n1 < n2)
         {
-            comprendidos = n1 + 1;
+            comprendidos = n1 + 8;
             hasta = n2;
         }
         else if(n1 > n2)
             {
-                comprendidos = n2 + 1;
+                comprendidos = n2 + 8;
                 hasta = n1;
             }
             else
