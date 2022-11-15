@@ -29,6 +29,7 @@ public class ej32
             }
             vuelta /= 10;
         }
+        System.out.println("hola");
 
         System.out.println("\nSuma de los digitos: " + suma);
     }    
