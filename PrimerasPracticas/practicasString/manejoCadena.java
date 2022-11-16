@@ -41,8 +41,9 @@ public class manejoCadena
         char letraO = 'o';
         int posicionO = str.indexOf(letraO);
         int posicionOO = str.indexOf(letraO, posicionO+1);
+        int posicionOOO = str.indexOf(letraO, posicionOO + 1);
 
-        System.out.println("la primera o esta en la pos: " + posicionO + ", la segunda o esta en: "+ posicionOO);
+        System.out.println("la primera o esta en la pos: " + posicionO + ", la segunda o esta en: "+ posicionOO + ", y la tercera " + posicionOOO);
 
         String lugar = "mundo";
         int posLugar = str.indexOf(lugar);

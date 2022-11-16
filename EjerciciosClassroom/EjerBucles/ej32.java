@@ -11,26 +11,28 @@ public class ej32
 
         long vuelta = 0;
         long suma = 0;
+        String paresStr = "";
 
-        while(num > 0)
+        while(num >= 1)
         {
             vuelta = (vuelta * 10) + (num % 10);
             num /= 10;
         }
         
-        System.out.print("Digitos pares: ");
+        System.out.print("\nDigitos pares: ");
 
         while(vuelta >= 1)
         {
             if((vuelta % 2) == 0)
             {
-                System.out.print(vuelta % 10 + " ");
+                //System.out.print(vuelta % 10 + " ");
+                paresStr += (vuelta % 10) + " ";
                 suma += (vuelta % 10);
             }
             vuelta /= 10;
         }
-        System.out.println("hola");
+        System.out.println(paresStr);
 
-        System.out.println("\nSuma de los digitos: " + suma);
+        System.out.println("Suma de los digitos: " + suma);
     }    
 }

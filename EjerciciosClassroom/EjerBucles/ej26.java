@@ -12,9 +12,9 @@ public class ej26
         int position = sc.nextInt();
         sc.close();
 
-        long numPrincipio = num;
         int positionFinal = 1;
         long vuelta = 0;
+        String posicionesStr = "";
 
         while(num > 0)
         {
@@ -22,16 +22,17 @@ public class ej26
             num /= 10;
         }
 
-        System.out.print("El numero " + numPrincipio + " se repite en las posiciones: ");
+        System.out.print("El numero " + position + " se repite en las posiciones: ");
 
         while(vuelta >= 10)
         {
             if((vuelta % 10) == position)
-                System.out.print(positionFinal + " ");
-            
+                //System.out.print(positionFinal + " ");
+                posicionesStr += positionFinal + " ";
+
             vuelta /= 10;
             positionFinal++;
         }
-        System.out.println();
+        System.out.println(posicionesStr);
     }    
 }
