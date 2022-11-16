@@ -4,7 +4,8 @@ public class AnalizadorTextos
 {
     public static void main(String[] args) 
     {
-        int letraInt = 0;
+        //Variables
+        boolean cerrarProg = false;
         String frase = "";
         int espaciosCreados = 0;
         String chrBuscar = "";
@@ -17,7 +18,7 @@ public class AnalizadorTextos
 
         Scanner sc = new Scanner(System.in);
 
-        while(letraInt != 1)
+        while(cerrarProg == false)
         {   
             System.out.println("\n/////////////////////////////////////////////////////////////////////////\n* Opción a - Añadir a la frase." + 
             "\n* Opción b - Indicar la ultima frase introducida.\n* Opción c - Indicar el número de palabras que tiene la frase." +
@@ -35,7 +36,7 @@ public class AnalizadorTextos
                     break;
 
                 case "b":
-                    if(fraseCompleta.equals(""))
+                    if(fraseCompleta.equals(""))//En todos los casos primero controlo errores.
                         System.out.println("No hay registro de frases anteriores.");
                     else
                         System.out.println(fraseCompleta);
@@ -47,6 +48,7 @@ public class AnalizadorTextos
                     else
                     {
                         totalLetras = (fraseCompleta.length()) - espaciosCreados;
+                        //A parte de las palabras e querido añadir el total de letras. *espacioscreados es por los espacios que se crea al sumar en el str de fraseCompleta, hay que restarlos
                         String[] palabras = fraseCompleta.split(" ");
                         totalPalabras = palabras.length;
 
@@ -62,13 +64,13 @@ public class AnalizadorTextos
                         System.out.println("Que caracter quieres buscar?");
                         chrBuscar = sc.nextLine().toLowerCase();
 
-                        posicionChr = fraseCompleta.indexOf(chrBuscar);
+                        posicionChr = fraseCompleta.indexOf(chrBuscar);//Obtengo la primera poscicion
 
                         if(posicionChr == -1)
                             System.out.println("La letra " + chrBuscar + " no esta en la frase.");
                         else
                         {
-                            posicionStr += (posicionChr + 1) + " ";
+                            posicionStr += (posicionChr + 1) + " ";//+1 porque empieza por 0
                             chrAparece++;
 
                             while(posicionChr != -1)
@@ -91,11 +93,11 @@ public class AnalizadorTextos
                     break;
 
                 case "s":
-                    letraInt = 1;
+                    cerrarProg = true;
                     break;
 
                 default:
-                    System.out.println("Introduce una letra correcta.");
+                    System.out.println("Introduce una letra correcta.");//Control del programa
             }
         }
         sc.close();
