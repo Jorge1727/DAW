@@ -7,7 +7,6 @@ public class MenuFrase_JorgeTapia1
         //Variables
         boolean cerrarProg = false;
         String frase = "";
-        String chrBuscar = "";
         String fraseCompleta = "";
         int posicionChr = 0;
         String posicionStr = "";
@@ -21,7 +20,7 @@ public class MenuFrase_JorgeTapia1
         {   
             System.out.println("\n/////////////////////////////////////////////////////////////////////////\n* Opción a - Añadir a la frase." + 
             "\n* Opción b - Indicar la ultima frase introducida.\n* Opción c - Indicar el número de palabras que tiene la frase." +
-            "\n* Opción d - Indicar cuantas veces a aparece un carácter en la frase.\n* Opción e - Limpiar frase.\n* Opción s - Salir." +
+            "\n* Opción d - Indicar cuantas veces aparece un carácter en la frase.\n* Opción e - Limpiar frase.\n* Opción s - Salir." +
             "\n/////////////////////////////////////////////////////////////////////////////");
             String letra = sc.nextLine().toLowerCase();
 
@@ -30,12 +29,16 @@ public class MenuFrase_JorgeTapia1
                 case "a":
                     System.out.println("Introduzca la frase: ");
                     frase = sc.nextLine();
-                    fraseCompleta += frase + " ";
+
+                    if(frase.length() == 0)
+                        System.out.println("No ha introducido ninguna frase");
+                    else 
+                        fraseCompleta += frase + " ";//o para restarlo los espacios usar trim, yo simplemente reste 1 despues. 
 
                     break;
 
                 case "b":
-                    if(fraseCompleta.equals(""))//En todos los casos primero controlo errores.
+                    if(fraseCompleta.equals(""))//He controlado todos los errores posibles en cualquier apartado.
                         System.out.println("No hay registro de frases anteriores.");
                     else
                         System.out.println("La frase actualmente sería: " + fraseCompleta);
@@ -62,34 +65,45 @@ public class MenuFrase_JorgeTapia1
                         System.out.println("No hay registro de frases anteriores.");
                     else 
                     {
-                        System.out.println("¿Que caracter desea buscar?");
-                        chrBuscar = sc.nextLine().toLowerCase();
-                        String fraseCompletaTLC = fraseCompleta.toLowerCase();//Convierto todo a lowerCase sin afectar a la original.
+                        String chrBuscar = "";
 
-                        posicionChr = fraseCompletaTLC.indexOf(chrBuscar);//Obtengo la primera poscicion.
-
-                        if(posicionChr == -1)
-                            System.out.println("La letra " + chrBuscar + " no está en la frase.");
-                        else
+                        while(chrBuscar.length() != 1)
                         {
-                            posicionStr += (posicionChr + 1) + " ";//+1 porque empieza por 0.
-                            chrAparece++;
-
-                            while(posicionChr != -1)
+                            System.out.println("¿Que caracter desea buscar?");
+                            chrBuscar = sc.nextLine();
+                            
+                            if(chrBuscar.length() == 1)
                             {
-                                posicionChr = fraseCompletaTLC.indexOf(chrBuscar, posicionChr + 1);
+                                String fraseCompletaTLC = fraseCompleta.toLowerCase();//Convierto todo a lowerCase sin afectar a la original.
 
-                                if(posicionChr != -1)
+                                posicionChr = fraseCompletaTLC.indexOf(chrBuscar);//Obtengo la primera poscicion.
+
+                                if(posicionChr == -1)
+                                    System.out.println("La letra " + chrBuscar + " no está en la frase.");
+                                else
                                 {
-                                    posicionStr += (posicionChr + 1) + " ";
+                                    posicionStr += (posicionChr + 1) + " ";//+1 porque empieza por 0.
                                     chrAparece++;
-                                }
-                            }
-                            System.out.println("La letra " + chrBuscar + " aparece " + chrAparece + " veces, y en las posiciones: " + posicionStr + " de la frase.");
-                        }
 
-                        chrAparece = 0;
-                        posicionStr = "";
+                                    while(posicionChr != -1)
+                                    {
+                                        posicionChr = fraseCompletaTLC.indexOf(chrBuscar, posicionChr + 1);
+
+                                        if(posicionChr != -1)
+                                        {
+                                            posicionStr += (posicionChr + 1) + " ";
+                                            chrAparece++;
+                                        }
+                                    }
+                                    System.out.println("La letra " + chrBuscar + " aparece " + chrAparece + " veces, y en las posiciones: " + posicionStr + " de la frase.");
+                                }
+
+                                chrAparece = 0;
+                                posicionStr = "";
+                            }
+                            else
+                                System.out.println("Error, introduzca bien los datos");
+                        }
                     }
 
                     break;
