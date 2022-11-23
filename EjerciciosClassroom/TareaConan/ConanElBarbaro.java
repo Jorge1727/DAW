@@ -8,7 +8,7 @@ public class ConanElBarbaro
         int ataqueElegido = 0;
         int partidasGanadas = 0;
         int partidasPerdidas = 0;
-        String siguienteZombie = "";
+        String siguienteZombie = "";//Para pasar con enter a la siguiente pelea, aunque me lo subraya porque nunca es utilizado
         Scanner sc = new Scanner(System.in);
 
         while(cerrarJuego == false)
@@ -20,6 +20,12 @@ public class ConanElBarbaro
             int ataqueZombie = 0;
             int defensaZombie = 0;
             int zombiesFinal = 0;
+            int zombiesActual = 0;
+            int pelea = 0;
+            int peleaZombieMasTiempo = 0;
+            int peleaZombie = 0;
+            int peleaMasLarga = 0;
+            int aux = 1;
             int fatality = 100; //Los fatalitys tendran un rango desde su max menos 5;
 
             do
@@ -62,11 +68,13 @@ public class ConanElBarbaro
                         if(ataqueConan >= 25)
                             ataqueConan = fatality;
                         
-                        defensaConan = (int)(Math.random() * 71);
+                        defensaConan = (int)((Math.random() * 41) + 30);
                         break;
                 }
 
-                if(zombies == 1)
+                zombiesActual = zombies;//para contador de pelea con zombie
+
+                if(zombies == 1)//zombie jefe
                 {
                     System.out.println("--- combate con ZOMBIE JEFE ---");
                     ataqueZombie = (int)(Math.random() * 56);//+5 ataque y +5 de vida
@@ -78,7 +86,7 @@ public class ConanElBarbaro
                     defensaZombie = (int)(Math.random() * 71);
                 }
 
-                if(ataqueConan > 5)
+                if(ataqueConan > 5)//pifia
                 {
                     if(ataqueConan == fatality)
                     {
@@ -91,11 +99,13 @@ public class ConanElBarbaro
                     {
                         System.out.println("Conan ataca - " + ataqueConan);
                         System.out.println("Zombie " + zombies + " defiende - " + defensaZombie);
+                        pelea++;//cada pelea
 
                         if(ataqueConan < defensaZombie)
                         {
                             System.out.println("Zombie " + zombies + " ataca - " + ataqueZombie);
                             System.out.println("Conan defiende - " + defensaConan);
+                            pelea++;
 
                             if(ataqueZombie > defensaConan)
                             {
@@ -119,7 +129,27 @@ public class ConanElBarbaro
                             }
                         }
 
-                        if(vidaConan == 0 || zombies == 0)
+                        //Contador de combate mas largo con zombie
+                        if(zombiesActual > zombies)
+                        {
+                            peleaZombie++;//contador de cada zombie muerto
+
+                            if(aux == 1)//entre solo una vez y la pelea mas larga tome como minimo la primera ronda
+                            {
+                                peleaMasLarga = pelea;
+                                aux++;
+                            }
+
+                            if(pelea >= peleaMasLarga)
+                            {
+                                peleaMasLarga = pelea;
+                                peleaZombieMasTiempo = peleaZombie;
+                            }
+
+                            pelea = 0;
+                        }
+
+                        if(vidaConan == 0 || zombies == 0)//salida de bucle
                         {
                             if(vidaConan == 0)
                             {
@@ -127,11 +157,13 @@ public class ConanElBarbaro
                                 zombies = 0;
                                 partidasPerdidas++;
                                 System.out.println("\n*************** GAME OVER *********************\n(Te falto matar a " + zombiesFinal +" zombies)");
+                                System.out.println("La pelea mas larga ha sido en la ronda: " + peleaZombieMasTiempo);
                             }
                             else
                             {
                                 partidasGanadas++;
                                 System.out.println("\n\t\tENHORABUENA\t\t\n************* TESORO CONSEGUIDO *************");
+                                System.out.println("La pelea mas larga ha sido en la ronda: " + peleaZombieMasTiempo);
                             }
                         }
                     }
@@ -147,6 +179,7 @@ public class ConanElBarbaro
                         zombies = 0;
                         partidasPerdidas++;
                         System.out.println("\n*************** GAME OVER *********************\n(Te falto matar a " + zombiesFinal +" zombies)");
+                        System.out.println("La pelea mas larga ha sido en la ronda: " + peleaZombieMasTiempo);
                     }
                 }
             }
@@ -165,6 +198,8 @@ public class ConanElBarbaro
         Los extras que he añadido han sido:
             - Fatality.
             - Zombie jefe.
+            - Factor minimo de defensa con escudo de 30.
+            - Indicador de pelea mas larga.
             - Historial de partidas ganadas y/o perdidas.
             - Mostrar el combate con cada zombie y pulsar enter para continuar.
          */
