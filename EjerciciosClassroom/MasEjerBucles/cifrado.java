@@ -10,6 +10,7 @@ public class cifrado
 
         System.out.print("Ahora el numero de cifrado: ");
         int cifra = sc.nextInt();
+        char cifrachr = (char)cifra;
 
         String fraseFinal = "";
         int fraseLenght = frase.length();
@@ -19,10 +20,24 @@ public class cifrado
         while(inicioPalabra < fraseLenght)
         {
             chr = frase.charAt(inicioPalabra);
-            chr += cifra;
-            fraseFinal += chr;
-            
+
+            if(chr == 32)
+                chr = (char)(cifrachr + 48);
+            else
+            {
+                chr += cifra;  
+                
+                if(chr > 90 && chr < 97)
+                    chr = (char)(64 + cifra);
+                else
+                {
+                    if(chr > 122)
+                        chr = (char)(96 + cifra);
+                }        
+            }
+            fraseFinal += chr; 
             inicioPalabra++;
+
         }
         sc.close();
 

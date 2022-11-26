@@ -50,6 +50,7 @@ public class cifradoMenu
                 frase = sc.nextLine();
                 System.out.print("Di el factor: ");
                 cifra = sc.nextInt();
+                char cifrachr = (char)cifra;
 
                 fraseLenght = frase.length();
                 while(inicioPalabra < fraseLenght)
@@ -57,22 +58,53 @@ public class cifradoMenu
                     if(signo == '+')
                     {
                         chr = frase.charAt(inicioPalabra);
-                        chr += cifra;
+
+                        if(chr == 32)
+                            chr = (char)(cifrachr + 48);
+                        else
+                        {
+                            chr += cifra;  
+                            
+                            if(chr > 90 && chr < 97)
+                                chr = (char)(64 + cifra);
+                            else
+                            {
+                                if(chr > 122)
+                                    chr = (char)(96 + cifra);
+                            }        
+                        }
                         fraseFinal += chr;
                     }
                     else
                     {
                         chr = frase.charAt(inicioPalabra);
-                        chr -= cifra;
+
+                        if(chr >= '0' && chr <= '9')
+                            chr = 32;
+                        else
+                        {
+                            chr -= cifra;
+                            
+                            if(chr < 65)
+                                chr = (char)(91 - cifra);
+                            else
+                            {
+                                if(chr < 97 && chr >  90)
+                                    chr = (char)(123 - cifra);
+                            }        
+                        }
                         fraseFinal += chr;
                     }
                     inicioPalabra++;
                     
                 }
 
-                System.out.println("Resultado: " + fraseFinal + "\n////////////////////////////////");
+                if(signo == '+')
+                    System.out.println("Resultado de cifrado: " + cifra + fraseFinal + "\n////////////////////////////////");
+                else   
+                System.out.println("Resultado de decifrado: " + fraseFinal + "\n////////////////////////////////");
             }
-            sc.close();
         }
+        sc.close();
     }    
 }

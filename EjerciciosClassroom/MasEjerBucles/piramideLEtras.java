@@ -12,23 +12,21 @@ public class piramideLEtras
         int altura = sc.nextInt();
         sc.close();
 
-        if(altura <= 26)
+        while(inicio <= altura)
         {
-            while(inicio <= altura)
+            char chr = 65;
+            for(int i = 1; i <= fila; i++)
             {
-                char chr = 65;
-                for(int i = 1; i <= fila; i++)
-                {
-                    System.out.print(chr);
-                    chr++;
-                }
-                inicio++;
-                fila++;
-                System.out.println();
+                if(chr == 91)
+                    chr = 65;
+                System.out.print(chr);
+                chr++;
             }
+            inicio++;
+            fila++;
+            System.out.println();
         }
-        else
-            System.out.println("Altura incorrecta, debe ser menor a 26");
-        
+        char lolo = '▓';
+        System.out.println(lolo + "\n" + lolo);
     }
 }
