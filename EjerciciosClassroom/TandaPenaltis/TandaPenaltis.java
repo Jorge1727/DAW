@@ -23,7 +23,7 @@ public class TandaPenaltis
             String markP1 = ": ";
             String markPC = "PC: ";
 
-            System.out.println(player1 + markP1 + "\n" + markPC);
+            System.out.println(player1 + ": -----" + "\n" + "PC: -----");
 
             while(turno <= 5)
             {
@@ -80,7 +80,26 @@ public class TandaPenaltis
                         golesPlayer++;
                     }
                 }
-                System.out.println(player1 + markP1 + "\n" + markPC);//Muestra de los resultados actuales del marcador.
+
+            /////////////////////ESTO ES COMO VA EL MARCADOR ACTUALMENTE///////////////
+                System.out.print(player1 + markP1);
+                int printMark = 1;
+                while(printMark <= (5 - turno))
+                {
+                    System.out.print("-");
+                    printMark++;
+                }
+                System.out.println();
+
+                System.out.print(markPC);
+                printMark = 0;
+                while(printMark <= (5 - turno))
+                {
+                    System.out.print("-");
+                    printMark++;
+                }
+                System.out.println();
+            /////////////////////////////////////////////////////////////////////////////
 
                 System.out.println("////////////////////////////////////////\n" + player1 + " intenta parar (I(izquierda), D(derecha), C(centro)");
                 decision = sc.nextLine().toLowerCase();
@@ -136,17 +155,35 @@ public class TandaPenaltis
                     }
 
                 }
-                System.out.println(player1 + markP1 + "\n" + markPC);//Marcador
+            /////////////////////ESTO ES COMO VA EL MARCADOR ACTUALMENTE///////////////
+                System.out.print(player1 + markP1);
+                printMark = 1;
+                while(printMark <= (5 - turno))
+                {
+                    System.out.print("-");
+                    printMark++;
+                }
+                System.out.println();
 
-                if(turno == 5 || ronda == 2)//Entrada para comparar los goles despues de los tiros obligatorios.
+                System.out.print(markPC);
+                printMark = 1;
+                while(printMark <= (5 - turno))
+                {
+                    System.out.print("-");
+                    printMark++;
+                }
+                System.out.println();
+            /////////////////////////////////////////////////////////////////////////////
+
+                if(turno == 5 || ronda == 2)//Entrada para comparar goles despues de los tiros obligatorios. Si es la sig ronda, siempre entrará.
                 {
                     if(golesPlayer > golesPC)
                     {
                         System.out.println("\n- " + player1 + " gana la tanda de penaltis!!");
-                        diferenciaGoles = true;
+                        diferenciaGoles = true;//Salida del programa
 
                         if(ronda == 2)//Tras una primera ronda en empate, puesto que actualizamos algunos valores.
-                            turno = 6;
+                            turno = 6;//Para salir del bucle
                     }
                     else
                     {
@@ -163,7 +200,7 @@ public class TandaPenaltis
                             if(ronda == 1)
                             {
                                 System.out.println("-- EMPATE, siguiente ronda --");//Tras la primera ronda, actualizamos valores
-                                turno = 1;
+                                turno = 0;
                                 markP1 = ": ";
                                 markPC = "PC: ";
                                 ronda++;
@@ -178,6 +215,6 @@ public class TandaPenaltis
             }
         }
         sc.close();
-        
+
     }   
 }
