@@ -1,36 +1,39 @@
 import java.util.Scanner;
 
-public class fechas1 
+public class Ejercicio1_JorgeTapia 
 {
     public static void main(String[] args) 
     {
-        final double PLATO1 = 5;
-        final double PLATO2 = 4;
-        final double PLATO3 = 4.5;
-        final double PLATO4 = 6;
-        final double PLATO5 = 8;
-        final double PLATO6 = 9;
-        final double PLATO7 = 5;
-        final double PLATO8 = 1.5;
-        final double PLATO9 = 1.25;
-        final double PLATO10 = 2;
+        final double[] PLATOS = new double[10];
+        //final double[] PLATOS = {5, 4, 4.5, 6, 8, 9, 5 ...};
 
-        boolean cerraProg = false;
-        String str1Platos = "**Primeros platos";
-        String str2Platos = "**Segundos platos";
-        String strPostres = "**Postres";
-        String strdescuentoFinal = "";
+        PLATOS[0] = 5;
+        PLATOS[1] = 4;
+        PLATOS[2] = 4.5;
+        PLATOS[3] = 6;
+        PLATOS[4] = 8;
+        PLATOS[5] = 9;
+        PLATOS[6] = 5;
+        PLATOS[7] = 1.5;
+        PLATOS[8] = 1.25;
+        PLATOS[9] = 2;
+
+        boolean cerrarProg = false;
         double tipoSeleccion = 0;
-        double total1Plato = 0;
-        double total2Plato = 0;
-        double totalPostre = 0;
         int descuento = 0;
+        double total1Plato = 0;
+        String str1Platos = "";
+        double total2Plato = 0;
+        String str2Platos = "";
+        double totalPostre = 0;
+        String strPostres = "";
+        String strdescuentoFinal = "";
         double total = 0;
         Scanner sc = new Scanner(System.in);
 
-        while(cerraProg == false)
+        while(cerrarProg == false)
         {
-            System.out.println(" *** RESTAURANTE VEGA DE MIJAS ****");
+            System.out.println(" *** RESTAURANTE IES VEGA DE MIJAS ****");
             System.out.println(" ----------------------------------");
             System.out.println("Primeros platos");
             System.out.println(" 1. Salmorejo (5€)");
@@ -51,48 +54,50 @@ public class fechas1
             System.out.println("Selecciona la opción deseada por el cliente...");
 
             int seleccion = sc.nextInt();
-            
+
             while(seleccion < 0 || seleccion > 10)//CONTROL DE ERRORES
             {
                 System.out.println("La opcion no es correcta. Di los platos del 1 al 10");
                 seleccion = sc.nextInt();
             }
 
-            if(seleccion == 0)
+            if (seleccion == 0)
             {
-                cerraProg = true;
+                cerrarProg = true;
                 total += total1Plato + total2Plato + totalPostre;
 
+                //APLICACION DE DESCUENTOS SEGUN SU TOTAL
                 if (total >= 20 && total <= 30)
                 {
                     total -= 2;
-                    strdescuentoFinal = "(con 2€ de descuento final)";
+                    strdescuentoFinal = "(-2€ de descuento ya aplicados)";
                 }
                 else
                 { 
                     if(total >= 30 && total <= 50)
                     {
                         total -= 3;
-                        strdescuentoFinal = "(con 3€ de descuento final)";
+                        strdescuentoFinal = "(-3€ de descuento ya aplicados)";
                     }
                     else
                     { 
                         if(total >= 50)
                         {
                             total -= 5;
-                            strdescuentoFinal = "(con 5€ de descuento final)";
+                            strdescuentoFinal = "(-5€ de descuento ya aplicados)";
                         }
                     }
                 }
-                System.out.println("----------------\n" + str1Platos);
-                System.out.println(str2Platos);
-                System.out.println(strPostres);
-                System.out.println("----------------\nTOTAL A PAGAR: " + total + "€ " + strdescuentoFinal + "\n----------------");
+
+                //IMPRIMIR TICKET
+                System.out.println("-----------------------------\n**Primeros platos" + str1Platos);
+                System.out.println("**Segundos platos" + str2Platos);
+                System.out.println("**Postres" + strPostres);
+                System.out.println("\nTOTAL A PAGAR: " + total + "€ " + strdescuentoFinal +"\n----------------------------");
             }
-                
             else
             {
-                System.out.println("¿Cuantos platos?");
+                System.out.println("¿Que cantidad?");
                 int cantidadPlantos = sc.nextInt();
 
                 while(cantidadPlantos <= 0)//CONTROL DE ERRORES
@@ -100,47 +105,47 @@ public class fechas1
                     System.out.println("La opcion no es correcta. Como minimo un plato");
                     cantidadPlantos = sc.nextInt();
                 }
-                
+
                 switch(seleccion)
                 {
                     //PRIMEROS PLATOS
                     case 1:
-                        tipoSeleccion = PLATO1;
+                        tipoSeleccion = PLATOS[0];
                         total1Plato += tipoSeleccion * cantidadPlantos;
                         str1Platos += "\nSalmorejo (5€) x" + cantidadPlantos;
                         break;
 
                     case 2:
-                        tipoSeleccion = PLATO2;
+                        tipoSeleccion = PLATOS[1];
                         total1Plato += tipoSeleccion * cantidadPlantos;
                         str1Platos += "\nSopa picadillo (4€) x" + cantidadPlantos;
                         break;
 
                     case 3:
-                        tipoSeleccion = PLATO3;
+                        tipoSeleccion = PLATOS[2];
                         total1Plato += tipoSeleccion * cantidadPlantos;
                         str1Platos += "\nEnsalada de atún (4.5€) x" + cantidadPlantos;
                         break;
 
-                    //SEGUNDOS PLATOS
+                    //SEGUNDOS PLATOS.
                     case 4:
                         descuento = 0;
 
-                        if(cantidadPlantos >= 2)//si es mayor o igual a dos platos se le resta 1 euro a cada plato, sin caumular descuentos.
+                        if(cantidadPlantos > 2)//si es mayor a dos platos se le resta 1 euro a cada plato, sin caumular descuentos.
                             descuento = cantidadPlantos;
                         
-                        tipoSeleccion += PLATO4;
-                        total2Plato = (tipoSeleccion * cantidadPlantos) - descuento;
+                        tipoSeleccion = PLATOS[3];
+                        total2Plato += (tipoSeleccion * cantidadPlantos) - descuento;
                         str2Platos += "\nPaella (6€) x" + cantidadPlantos;
                         break;
-
+                    
                     case 5:
                         descuento = 0;
 
-                        if(cantidadPlantos >= 2)
+                        if(cantidadPlantos > 2)
                             descuento = cantidadPlantos;
-
-                        tipoSeleccion = PLATO5;
+                        
+                        tipoSeleccion = PLATOS[4];
                         total2Plato += (tipoSeleccion * cantidadPlantos) - descuento;
                         str2Platos += "\nSalmón (8€) x" + cantidadPlantos;
                         break;
@@ -148,48 +153,46 @@ public class fechas1
                     case 6:
                         descuento = 0;
 
-                        if(cantidadPlantos >= 2)
+                        if(cantidadPlantos > 2)
                             descuento = cantidadPlantos;
                         
-                        tipoSeleccion = PLATO6;
+                        tipoSeleccion = PLATOS[5];
                         total2Plato += (tipoSeleccion * cantidadPlantos) - descuento;
                         str2Platos += "\nCodillo al horno (9€) x" + cantidadPlantos;
                         break;
-                    
+                
                     case 7:
                         descuento = 0;
 
-                        if(cantidadPlantos >= 2)
+                        if(cantidadPlantos > 2)
                             descuento = cantidadPlantos;
                         
-                        tipoSeleccion = PLATO7;
+                        tipoSeleccion = PLATOS[6];
                         total2Plato += (tipoSeleccion * cantidadPlantos) - descuento;
                         str2Platos += "\nLentejas (5€) x" + cantidadPlantos;
                         break;
 
                     //POSTRES
                     case 8:
-                        tipoSeleccion = PLATO8;
+                        tipoSeleccion = PLATOS[7];
                         totalPostre += tipoSeleccion * cantidadPlantos;
                         strPostres += "\nFruta (1.50€) x" + cantidadPlantos;
                         break;
 
                     case 9:
-                        tipoSeleccion = PLATO9;
+                        tipoSeleccion = PLATOS[8];
                         totalPostre += tipoSeleccion * cantidadPlantos;
                         strPostres += "\nCafé (1.25€) x" + cantidadPlantos;
                         break;
 
                     case 10:
-                        tipoSeleccion = PLATO10;
+                        tipoSeleccion = PLATOS[9];
                         totalPostre += tipoSeleccion * cantidadPlantos;
                         strPostres += "\nHelado (2€) x" + cantidadPlantos;
                         break;
                 }
-                
             }
-
         }
         sc.close();
-    }    
+    }   
 }

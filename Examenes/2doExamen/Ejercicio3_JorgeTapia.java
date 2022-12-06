@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class fechas2 
+public class Ejercicio3_JorgeTapia 
 {
     public static void main(String[] args) 
     {
@@ -24,6 +24,7 @@ public class fechas2
 
             String eleccion = sc.nextLine().toLowerCase();
 
+            //CONTROL DE ERRORES
             while(!eleccion.equals("a") && !eleccion.equals("b") && !eleccion.equals("c") && !eleccion.equals("d") && !eleccion.equals("e") && !eleccion.equals("f"))
             {
                 System.out.println("Opcion incorrecta, elije de la A a la F");
@@ -36,14 +37,14 @@ public class fechas2
                     System.out.println("Di la frase:");
                     frase = sc.nextLine();
 
-                    if(frase.length() == 0)
+                    if(frase.length() == 0)//He controlado todos los errores posibles en los apartados.
                         System.out.println("No ha introducido ninguna frase");
                     else 
                         fraseCompleta = frase;
                     break;
 
                 case "b":
-                    if(fraseCompleta.equals(""))//He controlado todos los errores posibles en cualquier apartado.
+                    if(fraseCompleta.equals(""))
                         System.out.println("No hay registro de frases anteriores.");
                     else
                         System.out.println("La frase actualmente sería: " + fraseCompleta);
@@ -56,6 +57,7 @@ public class fechas2
                     else
                     {
                         String fraseCompletaTLC = fraseCompleta.toLowerCase();//para no afectar a la original
+                        aparece = 0;//Reseteo de valores
 
                         System.out.println("¿Que cadena quieres buscar?");
                         frase = sc.nextLine().toLowerCase();
@@ -69,7 +71,7 @@ public class fechas2
                         {
                             aparece += palabras[i].length();
                             System.out.println("Aparece en la posicion " + aparece);
-                            aparece += lengthFrase;
+                            aparece += lengthFrase;//para controlar la diferencia de la longitud de la frase a buscar
                         }
                     }
                     break;
@@ -110,5 +112,6 @@ public class fechas2
                     cerrarProg = true;
             }
         }
+        sc.close();
     }    
 }
