@@ -9,6 +9,7 @@ public class ej37
         System.out.println("Introduce tu numero");
         Scanner sc = new Scanner(System.in);
         int num = sc.nextInt();
+        sc.close();
 
         while(num >= 0)
         {

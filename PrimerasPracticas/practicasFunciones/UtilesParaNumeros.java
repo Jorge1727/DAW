@@ -181,14 +181,14 @@ public class UtilesParaNumeros
         int mod = 0;
         int posicion = -1;
 
-        for(int i = 0; i <= numero; i++)
+        for(int i = 0; i <= digitos(numero); i++)//podria hacerlo con while.
         {
             mod = volteado % 10;
 
             if(mod == busca)
             {
                 posicion = i;
-                i = numero;//para que salga del bucle y coja solo la primera posicion que encuentre
+                i = digitos(numero);//para que salga del bucle y coja solo la primera posicion que encuentre
             }
 
             volteado /= 10;
@@ -273,24 +273,14 @@ public class UtilesParaNumeros
     static int trozoDeNumero(int inicio, int ultimo, int numero)
     {
         int volteado = voltea(numero);
-        int cont = 0;
 
         for(int i = 0; i < inicio; i++)
             volteado /= 10;
 
         volteado = voltea(volteado);
 
-        while(numero > 0)
-        {
-            numero /= 10;
-            cont++;
-        }
-
-        cont = cont - ultimo;
-        for(int i = 0; i <= cont; i++)
+        for(int i = 0; i < ultimo; i++)
             volteado /= 10;
-
-        System.out.println(volteado);
 
         return volteado;
     }
@@ -321,26 +311,58 @@ public class UtilesParaNumeros
         return pega;
 
     }
+
+    /**
+     * Esta función convierte el número n al sistema de palotes y lo devuelve en una
+    cadena de caracteres. Por ejemplo, el 470213 en decimal es el | | | | - | | | | | |
+    | - - | | - | - | | | en el sistema de palotes.
+     * @param n
+     * @return
+     */
+    public static String convierteEnPalotes(int numero)
+    {
+        int digitos = digitos(numero);
+        String palotesFinal = "";
+
+        for(int i = 0; i < digitos; i++)
+        {
+            int queDigito = digitoN(i, numero);
+            String palotes = "";
+
+            while(queDigito > 0)
+            {
+                palotes += "|";
+
+                queDigito--;
+            }
+
+            if(i == (digitos - 1))
+                palotesFinal += palotes;
+
+            else
+                palotesFinal += palotes + " - ";
+
+        }
+        return palotesFinal;
+    
+    }
+
+    /**
+     * Esta función convierte el número n al sistema Morse y lo devuelve en una
+        cadena de caracteres.
+     * @param n
+     * @return
+     */
+    public String convierteEnMorse(int n)
+    {
+        
+    }
+
 }
 //     //---------------------------------------------psvm--------------------------------------------------
 //     public static void main(String[] args) 
 //     {
-//         int num1 = 1234;
-//         int num2 = 5678;
-//         int num3 = 12345678;
-
-//         System.out.println(esCapicua(num1));
-//         System.out.println(esPrimo(num1));
-//         System.out.println(siguientePrimo(num1));
-//         System.out.println(potencia(num1, num2));
-//         System.out.println(digitos(num1));
-//         System.out.println(voltea(num1));
-//         System.out.println(digitoN(num1, num2));
-//         System.out.println(posicionDeDigito(num1, num2));
-//         System.out.println(quitaPorDetras(num1, num2));
-//         System.out.println(quitaPorDelante(num1, num2));
-//         System.out.println(pegaPorDelante(num1, num2));
-//         System.out.println(trozoDeNumero(num1, num2, num3));
-//         System.out.println(juntaNumeros(num1, num2));
+//         int num1 = 532;
+//             System.out.println(convierteEnPalotes(num1));
 //     }
 // }
