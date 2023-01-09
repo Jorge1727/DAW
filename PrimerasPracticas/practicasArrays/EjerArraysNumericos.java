@@ -1,12 +1,12 @@
 import java.util.Scanner;
 
-public class EjerArrays
+public class EjerArraysNumericos
 {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) 
     {
-        String[] array = new String[10];
+        int[] array = new int[10];
         boolean cerrarProg = false;
 
         do
@@ -55,7 +55,7 @@ public class EjerArrays
      */
     static int menu()
     {
-        System.out.println("1 - limpia\n2 - inserta en posicion\n3 - muestra en tal posicion\n4 - llenar todo array con i\n5 - mostrar todo array\n0 - salir");
+        System.out.println("1 - limpia\n2 - inserta en posicion\n3 - muestra en tal posicion\n4 - llenar todo array con 666\n5 - mostrar todo array\n0 - salir");
 
         int opcion = sc.nextInt();
 
@@ -66,11 +66,11 @@ public class EjerArrays
      * Limpia el array
      * @param puntero
      */
-    static void limpiar(String[] puntero)
+    static void limpiar(int[] puntero)
     {
         for(int i = 0; i < puntero.length; i++)
         {
-            puntero[i] = null;
+            puntero[i] = 0;
         }
     }
 
@@ -78,14 +78,14 @@ public class EjerArrays
      * Inserta en la posicion indicada lo que se desee en el array
      * @param array
      */
-    static void insertar(String[] array)
+    static void insertar(int[] array)
     {
         System.out.println("Di la posicion que quieres modificar");
         int posicion = sc.nextInt();
         sc.nextLine();
 
         System.out.println("Que quieres añadir?");
-        String add = sc.nextLine();
+        int add = sc.nextInt();
 
         array[posicion] = add;
     }
@@ -94,7 +94,7 @@ public class EjerArrays
      * Muestra el array seleccionado
      * @param array
      */
-    static void mostrar(String[] array)
+    static void mostrar(int[] array)
     {
         System.out.println("Di la posicion que quieres ver");
         int posicion = sc.nextInt();
@@ -106,11 +106,11 @@ public class EjerArrays
      * Lleana el array de i
      * @param puntero
      */
-    static void llenarArray(String[] puntero)
+    static void llenarArray(int[] puntero)
     {
         for(int i = 0; i < puntero.length; i++)
         {
-            puntero[i] = "cadena i";
+            puntero[i] = 666;
         }
     }
 
@@ -118,7 +118,7 @@ public class EjerArrays
      * Muestra todo el array
      * @param array
      */    
-    static void mostrarTodo(String[] array)
+    static void mostrarTodo(int[] array)
     {
         for(int i = 0; i < array.length; i++)
         {
