@@ -1,3 +1,5 @@
+package EjerArrays;
+
 import java.util.Scanner;
 
 public class ej3 
