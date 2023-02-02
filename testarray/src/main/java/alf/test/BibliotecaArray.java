@@ -1,8 +1,11 @@
-package EjerArrays;
+package alf.test;
 
-public class UtilesArrayJorgeTapia
-{
-    /**
+import java.util.Arrays;
+
+public class BibliotecaArray {
+    
+    
+/**
      * Imprime el array
      * @param array
      */
@@ -115,7 +118,7 @@ public class UtilesArrayJorgeTapia
      * @param posicion
      * @return
      */
-    static int[] insertatEnPosicion(int[] array, int elemento, int posicion)
+    static int[] insertarEnPosicion(int[] array, int elemento, int posicion)
     {
         int[] nuevoArray = new int[array.length + 1];
 
@@ -403,4 +406,7 @@ public class UtilesArrayJorgeTapia
 
         return iguales;
     }
+
 }
+
+
