@@ -2,17 +2,65 @@ package ClasesT6.Clases;
 
 public class Persona 
 {
-    //Atributos de la clase
-    String nombre;
-    String apellidos;
-    int edad;
-    int estatura;
-    String dni;
+    //Atributos de la clase (antes )
+    public String nombre;
+    private String apellidos;
+    public int edad;
+    public int estatura;
+    private String dni;
 
-    //Contructores
-    public Persona()
+
+    
+    //Set and gets---------------------------------------- para editar un atributo privado
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getApellidos() {
+        return apellidos;
+    }
+
+    public void setApellidos(String apellidos) {
+        this.apellidos = apellidos;
+    }
+
+    public int getEdad() {
+        return edad;
+    }
+
+    public void setEdad(int edad) {
+        this.edad = edad;
+    }
+
+    public int getEstatura() {
+        return estatura;
+    }
+
+    public void setEstatura(int estatura) {
+        this.estatura = estatura;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public void setDni(String dni) {
+        this.dni = dni;
+    }
+
+    // ---------------------------------------------------------------
+
+
+    //Contructores (Funciones ahora se llama metodos)
+    public Persona(String nombree, String apellido)
     {
-        this.nombre = "Desconocido";
+        this.nombre = nombree;
+        this.apellidos = apellido;
     }
 
     public Persona(String nombre, int edad)
