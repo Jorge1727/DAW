@@ -1,0 +1,45 @@
+package ClasesT6.Clases;
+
+public class FichaDomino 
+{
+    //Atributos
+    private int lado1;
+    private int lado2;
+
+    //Constructor
+    public FichaDomino(int lado1, int lado2)
+    {
+        this.lado1 = lado1;
+        this.lado2 = lado2;
+    }
+
+    //Metodos
+    public int getLado1() {
+        return lado1;
+    }
+
+    public void setLado1(int lado1) {
+        this.lado1 = lado1;
+    }
+
+    public int getLado2() {
+        return lado2;
+    }
+
+    public void setLado2(int lado2) {
+        this.lado2 = lado2;
+    }
+
+    @Override
+    public String toString()
+    {
+        String resultado = "[" + this.lado1 + "|" + this.lado2 + "]";
+
+        return resultado;
+    }
+
+    public void voltea()
+    {
+        
+    }    
+}
