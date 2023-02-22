@@ -4,80 +4,88 @@ public class Hora
 {
     //Atributos
     private int horas;
-    private int mtos;
-    private int sgs;
-    
+    private int minutos;
+
     //Constructor
-    public Hora(int hora)
+    public Hora(int hora, int minutos)
     {
-        if(hora > 23)
-            this.horas = 0;
-        
+        if (hora < 0 && hora >23)
+        {
+            this.horas = 0;    
+        }
         else
-            this.horas = hora;    
-
-        this.mtos = 0;
-        this.sgs = 0;
-        
-    }
-
-    //Atributos
-
-    public int getHora() {
-        return horas;
-    }
-
-    public void setHora(int hora) {
-        if(horas <= 23)
         {
             this.horas = hora;
         }
-        else
-        {
-            this.horas = 0;
-        }
-        
+        this.minutos = minutos;
     }
 
-    public int getMto() {
-        return mtos;
-    }
+    //Metodos
 
-    public void setMto(int mto) 
+    
+    public void inc()
     {
-        if(mtos < 60)
-        {
-            this.mtos = mto;
-        }
-        else
-        {
-            this.mtos = 0;
-            //nocorrecto : this.horas = this.horas + 1;
-            setHora(getHora() + 1);
-        }
+        setMinutos(getMinutos() + 1);
     }
 
-    public int getSg() {
-        return sgs;
-    }
-
-    public void setSg(int sg) 
+    /**
+     * Devuelve boolean true si se pudo cambiar la hr y false si no.
+     * @param hora
+     * @return
+     */
+    public boolean setHora(int hora)
     {
-        if(sgs < 60)
+        boolean resultado = false;
+
+        if(hora > 0 && hora < 24)
         {
-            this.sgs = sg;
+            setHoras(hora);
+            resultado = true;
+        }
+        else
+            System.out.println("No se pudo cambiar la hora");
+
+        return resultado;
+            
+    }
+
+    public int getHoras() {
+        return horas;
+    }
+
+    public void setHoras(int horas) {
+        if(horas <= 23)
+        {
+            this.horas = horas;
         }
         else
         {
-            this.sgs = 0;
-            setMto(getMto() + 1);
-            // NO --this.mtos = this.mtos + 1;
+            setHoras(0);
         }
     }
+
+    public int getMinutos() {
+        return minutos;
+    }
+
+    public void setMinutos(int minutos) {
+        if (minutos < 60)
+        {
+            this.minutos = minutos;
+        }
+        else 
+        {
+            this.minutos = 0;
+            //this.horas =  this.horas +1; No es correcto asi
+            setHoras(getHoras()+1);
+        }
+    }
+
+    
 
     @Override
     public String toString()
     {
-        return getHora() //FALTAAAAAAAAAAAAA
+        return getHoras() + ":" + getMinutos();
     }
 }
