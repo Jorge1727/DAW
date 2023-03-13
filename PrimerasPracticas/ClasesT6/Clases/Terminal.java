@@ -3,8 +3,8 @@ package ClasesT6.Clases;
 public class Terminal 
 {
     //Atributos
-    private String numero;
-    private int tiempo;
+    protected String numero;
+    protected int tiempo;
 
     //Connstructor
     public Terminal(String numero)
@@ -22,11 +22,13 @@ public class Terminal
         return resultado;
     }
 
-    public int getTiempo() {
+    public int getTiempo() 
+    {
         return tiempo;
     }
 
-    public void setTiempo(int tiempo) {
+    public void setTiempo(int tiempo) 
+    {
         this.tiempo = tiempo;
     }
 

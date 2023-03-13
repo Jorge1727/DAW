@@ -82,6 +82,21 @@ public class Hora
     }
 
     
+    @Override
+    public boolean equals(Object obj1)
+    {
+        boolean resultado = false;
+
+        //convertir objeto a la clase persona
+        Hora hr = (Hora)obj1;
+
+        if((hr.minutos == this.minutos) && (hr.minutos == this.minutos))
+        {
+            resultado = true;
+        }
+
+        return resultado;
+    }
 
     @Override
     public String toString()

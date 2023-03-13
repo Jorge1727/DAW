@@ -19,6 +19,9 @@ public class Cliente
 
     }
 
+    public Cliente(String string, String string2, String string3, int i, boolean b) {
+    }
+
     //Metodos
     public String getNombre() {
         return nombre;
