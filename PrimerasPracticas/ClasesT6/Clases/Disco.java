@@ -10,8 +10,8 @@ public class Disco
     private int duracion;
 
     //Constructor
-    public Disco(String codigo, String autor, String titulo, String genero, int duracion) {
-        this.codigo = codigo;
+    public Disco(int i, String autor, String titulo, String genero, int duracion) {
+        this.codigo = i;
         this.autor = autor;
         this.titulo = titulo;
         this.genero = genero;

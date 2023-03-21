@@ -22,8 +22,7 @@ public class Supermercado extends Negocio implements Tienda_I
 
     @Override
     public void abrir() {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'abrir'");
+        this.estado = true;
     }
 
     @Override
@@ -34,19 +33,36 @@ public class Supermercado extends Negocio implements Tienda_I
             //Atendemos al primero de la cola
             Cliente clienteAtendido = colaClientes[0];
 
-            //quitamos el primero de la cola
-            Cliente[] nuevaCola = new Cliente[this.colaClientes.length - 1]
+            //Quitamos el primer cliente de la cola
+            Cliente[] nuevacola = new Cliente[this.colaClientes.length-1];
+            for (int i = 0; i < nuevacola.length; i++) 
             {
-                
-            }    
-        
+                nuevacola[i] = colaClientes[i+1];    
+            }
+            this.colaClientes = nuevacola;
+
+            return clienteAtendido;
+        }
+        else
+        {
+            //no hay clientes en cola
+            return null;
         }
     }
 
     @Override
     public void nuevoCliente(Cliente cliente) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'nuevoCliente'");
+        //Inserto el el array de clientes
+        Cliente[] nuevaCola = new Cliente[this.colaClientes.length+1];
+
+        for (int i = 0; i < this.colaClientes.length; i++) 
+        {
+            nuevaCola[i] = this.colaClientes[i];
+        }
+
+        nuevaCola[nuevaCola.length-1] = cliente;
+
+        this.colaClientes = nuevaCola;
     }
 
     

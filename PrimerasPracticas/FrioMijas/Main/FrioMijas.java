@@ -1,5 +1,13 @@
 package FrioMijas.Main;
 
+import FrioMijas.Equipos.Arcon;
+import FrioMijas.Equipos.Camara;
+import FrioMijas.Equipos.Frigorifico;
+import FrioMijas.Equipos.Minibar;
+import FrioMijas.Oficinas.Sede;
+import FrioMijas.RRHumanos.Empleado;
+import FrioMijas.RRHumanos.Jefe;
+
 public class FrioMijas 
 {
     public static void main(String[] args)
@@ -39,42 +47,88 @@ public class FrioMijas
         System.out.println(jefe1);
 
         System.out.println(jefe2);
+        jefe2.generaPassword(8);
+        System.out.println("Nueva contraseña para jefe2");
+        System.out.println(jefe2);
         jefe2.generaPassword();
         System.out.println("Nueva contraseña para jefe2");
         System.out.println(jefe2);
 
         //Mostrar la información completa de cada una de las sedes + jefe + empleados
         System.out.println(sede1);
-        
         System.out.println(sede2);
 
         /*
          * HACER *
          * Mostrar si la contraseña de los jefes es no Fuerte
          */
+        jefe1.generaPassword(20);
+        System.out.println(jefe1);
+        boolean esSegura = jefe1.esFuerte();
+        System.out.println(esSegura);
+
+
+
 
          /*
           * HACER
           * Generar contraseña de 10 elementos que sea fuerte para cada uno de los jefes
           */
+        boolean sonFuertes = false;
+        while(sonFuertes == false)
+        {
+            if(jefe1.esFuerte() == false)
+            {
+                jefe1.generaPassword(10);
+            }
+            else if(jefe2.esFuerte() == false)
+            {
+                jefe2.generaPassword(10);
+            }
+            else
+            {
+                sonFuertes = true;
+                System.out.println(jefe1);
+                System.out.println(jefe2);
+            }
+        }
 
-         /*
-         * HACER *
-         * Empleados de la sede2 con sueldo entre 500 y 1500 
-         */
+        esSegura = jefe1.esFuerte();
+        System.out.println(esSegura);
+        esSegura = jefe2.esFuerte();
+        System.out.println(esSegura);
+
 
         /*
          * HACER *
-         * Crea 5 equipos frigorificos diferentes y asignalos a la 2º sede y muéstralos a continuación   
+         * Empleados de la sede2 con sueldo entre 500 y 1500 
          */
-
-         
-
+        sede2.sueldoEntre(500, 1500);
 
 
+        /*
+         * HACER *
+         * Crea 5 equipos frigorificos diferentes y asignalos a la 2º sede y muéstralos a continuación
+         */
+        Minibar minibar1 = new Minibar(2, 4, 3, 1700, "Fujitsu", 4);
+        Minibar minibar2 = new Minibar(2, 4, 3, 1700, "Rowenta", 7);
+        Frigorifico frigorifico1 = new Frigorifico(2, 4, 3, 1700, "Bosch");
+        Arcon arcon1 = new Arcon(2, 4, 3, 1700, "Fujitsu", 2);
+        Camara camara1 = new Camara(2, 4, 3, 1700, "Fujitsu", -20);
 
-
+        sede2.addEquipo(minibar1);
+        sede2.addEquipo(minibar2);
+        sede2.addEquipo(frigorifico1);
+        sede2.addEquipo(arcon1);
+        sede2.addEquipo(camara1);
         
+        System.out.println(sede2);
+
+        minibar1.consumo();
+        minibar2.consumo();
+        frigorifico1.consumo();
+        arcon1.consumo();
+        camara1.consumo();
         
     }
 }
