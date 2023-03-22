@@ -63,6 +63,7 @@ public class Jefe extends Empleado
 
         while(i < longitud)
         {
+            //He utilizado la tabla ASCII y he jugado con los chars etc.
             int rndm = (int)(Math.random() * 74) + 48;
 
             if((rndm >= 48 && rndm <= 57) || (rndm >= 65 && rndm <= 90) || (rndm >= 97 && rndm <= 122))
