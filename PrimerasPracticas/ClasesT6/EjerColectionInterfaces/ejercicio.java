@@ -31,7 +31,7 @@ public class ejercicio
 
         for (int i = 0; i < size; i++) 
         {
-            if(repetidos.contains(listNumeros.get(i)) == false)
+            if(repetidos.contains(listNumeros.get(i))   == false)
             {
                 norepetidos.add(listNumeros.get(i));
             }
@@ -40,14 +40,16 @@ public class ejercicio
         System.out.println("Lista de numeros completa");
         System.out.println(listNumeros.toString());
         
+        System.out.println("Mostrar los numeros que estan en la lista");
+        System.out.println(seRepite.toString());
+
         System.out.println("REPETIDOS");
         System.out.println(repetidos.toString());
         
-        System.out.println("NO REPETIDOS");
+        System.out.println("NO REPETIDOS de la lista original");
         System.out.println(norepetidos.toString());
 
-
-        //System.out.println(seRepite.toString());
+        
 
         
     }
