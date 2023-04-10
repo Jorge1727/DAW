@@ -1,6 +1,6 @@
-package examenClases_JorgeTapia.Clases;
+package examenClases_JorgeTapia.Viaje;
 
-import examenClases_JorgeTapia.Clases.Personas.Instructor;
+import examenClases_JorgeTapia.RRHH.Instructor;
 
 public class Paracaidas 
 {
@@ -12,7 +12,7 @@ public class Paracaidas
     private int num_id;
     private int anioFab;
     private Fabricante tipoFabricante;
-    public Instructor instructor;
+    private Instructor instructor;
 
     //Constructor
     public Paracaidas(int anioFab, Fabricante tipoFabricante, Instructor instructor)
@@ -38,6 +38,15 @@ public class Paracaidas
         return tipoFabricante;
     }
 
+    public Instructor getInstructor() {
+        return instructor;
+    }
+
+    @Override
+    public String toString()
+    {
+        return "Paracaidas: "+ getTipoFabricante();
+    }
     
     
 

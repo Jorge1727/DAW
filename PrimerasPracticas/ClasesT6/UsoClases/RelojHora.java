@@ -76,7 +76,7 @@ public class RelojHora
  
         System.out.println(re1.equals(re2));
         System.out.println(re2.equals(re3));
- 
+
         sc.close();
     }
 

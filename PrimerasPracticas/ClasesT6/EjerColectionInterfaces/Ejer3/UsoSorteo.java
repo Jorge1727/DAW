@@ -30,8 +30,8 @@ public class UsoSorteo
         HashSet<Integer> numPremiados = (HashSet<Integer>) sorteoNumeros.premiados(2);
         
 
-        System.out.println(ganadores.toString());
-        System.out.println(numPremiados.toString());
+        System.out.println(ganadores);
+        System.out.println(numPremiados);
             
     }
 }

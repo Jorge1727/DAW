@@ -1,10 +1,10 @@
-package examenClases_JorgeTapia.Clases.Personas;
+package examenClases_JorgeTapia.RRHH;
 
 public abstract class Persona 
 {
     //Atributos
-    public String nombre;
-    public String apellidos;
+    private String nombre;
+    private String apellidos;
 
     //Cosntructor
     public Persona(String nombre, String apellidos) 
@@ -14,7 +14,7 @@ public abstract class Persona
     }
 
     //Metodos
-    public abstract String informacion();
+    public abstract String informacion(); 
 
     public String getNombre() {
         return nombre;

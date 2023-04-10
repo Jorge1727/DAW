@@ -1,4 +1,4 @@
-package examenClases_JorgeTapia.Clases.Personas;
+package examenClases_JorgeTapia.RRHH;
 
 public class Instructor extends Persona
 {

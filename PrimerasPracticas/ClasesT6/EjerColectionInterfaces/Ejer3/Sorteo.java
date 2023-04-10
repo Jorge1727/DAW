@@ -33,6 +33,7 @@ public class Sorteo <T extends Comparable <T>>
         //desordenar de forma aleatoria
         Collections.shuffle(ordenar);
 
+
         //devolver los x primeros
         Set <T> bolsaPremiados = new HashSet<>();
         for (int i = 0; i < numeroPremiados; i++) 

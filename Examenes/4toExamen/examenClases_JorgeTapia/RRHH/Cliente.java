@@ -1,4 +1,4 @@
-package examenClases_JorgeTapia.Clases.Personas;
+package examenClases_JorgeTapia.RRHH;
 
 public class Cliente extends Persona
 {
@@ -29,7 +29,7 @@ public class Cliente extends Persona
     @Override
     public String informacion()
     {
-        return getNombre() + getApellidos() + getTlf() + getAlturaSalto() + isSegVida();
+        return super.getNombre() + super.getApellidos() + " " +this.alturaSalto;
     }
 
     public String getTlf() {

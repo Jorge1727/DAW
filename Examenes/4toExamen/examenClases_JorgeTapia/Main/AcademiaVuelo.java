@@ -1,12 +1,12 @@
-package examenClases_JorgeTapia;
+package examenClases_JorgeTapia.Main;
 
-import examenClases_JorgeTapia.Clases.Personas.Cliente;
-import examenClases_JorgeTapia.Clases.Avion;
-import examenClases_JorgeTapia.Clases.Paracaidas;
-import examenClases_JorgeTapia.Clases.Vuelo;
-import examenClases_JorgeTapia.Clases.Paracaidas.Fabricante;
-import examenClases_JorgeTapia.Clases.Personas.Instructor;
-import examenClases_JorgeTapia.Clases.Personas.Piloto;
+import examenClases_JorgeTapia.RRHH.Cliente;
+import examenClases_JorgeTapia.RRHH.Instructor;
+import examenClases_JorgeTapia.RRHH.Piloto;
+import examenClases_JorgeTapia.Viaje.Avion;
+import examenClases_JorgeTapia.Viaje.Paracaidas;
+import examenClases_JorgeTapia.Viaje.Vuelo;
+import examenClases_JorgeTapia.Viaje.Paracaidas.Fabricante;
 
 public class AcademiaVuelo
 {

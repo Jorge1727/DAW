@@ -1,4 +1,4 @@
-package examenClases_JorgeTapia.Clases.Personas;
+package examenClases_JorgeTapia.RRHH;
 
 public class Piloto extends Persona
 {
@@ -16,7 +16,9 @@ public class Piloto extends Persona
     @Override
     public String informacion()
     {
-        return getNombre() + getApellidos() + getAnioTitulo();
+        //ToString?
+
+        return "Piloto: "+ this.getNombre() + " " + this.getApellidos() + " Año titulo: "+ this.anioTitulo;
     }
     
     public int getAnioTitulo() {

@@ -18,4 +18,4 @@ public class ColeccionGenerica <T>
 
         return resultado;
     }
-}
+} 
