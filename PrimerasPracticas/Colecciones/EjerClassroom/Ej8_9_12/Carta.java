@@ -8,7 +8,7 @@ public class Carta implements Comparable<Carta>
     //Atributos de carta
     private String valor;
     private Palos palos;
-
+ 
     public Carta()
     {
         //HAce carta al azar

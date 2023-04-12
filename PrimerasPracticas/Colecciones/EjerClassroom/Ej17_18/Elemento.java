@@ -1,5 +1,7 @@
 package Colecciones.EjerClassroom.Ej17_18;
 
+import java.text.DecimalFormat;
+
 public class Elemento 
 {
     //Atributos
@@ -46,9 +48,7 @@ public class Elemento
     @Override
     public String toString() 
     {
-        return this.nombreProducto + ":PVP" + this.precio + " Unidades: " + this.cantidad + "Subtotal";  
+        DecimalFormat df = new DecimalFormat("#.##"); //Buenardo
+        return this.nombreProducto + ", PVP" + this.precio + " Unidades: " + this.cantidad + ", Subtotal: " + df.format(this.precio * this.cantidad);  
     }
-    
-
-    
 }

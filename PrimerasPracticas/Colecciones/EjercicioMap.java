@@ -24,7 +24,7 @@ public class EjercicioMap
                     String producto = sc.nextLine().toUpperCase();
 
                     recambios.put(producto, 0);
-                    break;
+                    break; 
                 
                 case 2:
                     System.out.println("Di el codigo del producto");
