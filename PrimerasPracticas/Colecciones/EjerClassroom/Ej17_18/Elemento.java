@@ -51,4 +51,9 @@ public class Elemento
         DecimalFormat df = new DecimalFormat("#.##"); //Buenardo
         return this.nombreProducto + ", PVP" + this.precio + " Unidades: " + this.cantidad + ", Subtotal: " + df.format(this.precio * this.cantidad);  
     }
+
+    @Override
+    public int hashCode() {
+        return 0;
+    }
 }

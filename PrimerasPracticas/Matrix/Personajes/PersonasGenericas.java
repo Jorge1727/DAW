@@ -16,7 +16,6 @@ public class PersonasGenericas extends Personajes
     @Override
     public String mostrarInformacion()
     {
-        
-        return 
+        return getNombre() + ", Ciudad: " + getNombreCiudad() + ", Probablidiad Morir: " + this.probabilidadDeMorir;
     }
 }
