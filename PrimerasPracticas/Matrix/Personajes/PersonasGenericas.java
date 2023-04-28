@@ -19,20 +19,8 @@ public class PersonasGenericas extends Personajes
     @Override
     public String mostrarInformacion()
     {
-        return "||" + getNombre() + ", Ciudad: " + getNombreCiudad() + ", Probablidiad Morir: " + this.probabilidadDeMorir;
-    }
-
-    @Override
-    public String toString() {
-        return "| P";
-    }
-
-    public int getProbabilidadDeMorir() {
-        return probabilidadDeMorir;
-    }
-
-    public void setProbabilidadDeMorir(int probabilidadDeMorir) {
-        this.probabilidadDeMorir = probabilidadDeMorir;
+        
+        return 
     }
 
     @Override

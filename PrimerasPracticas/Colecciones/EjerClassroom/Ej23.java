@@ -37,7 +37,7 @@ public class Ej23
 
         int capturas = (int)(Math.random() * 15) + 1;
 
-        for (int i = 0; i < capturas; i++)
+        for (int i = 0; i < capturas-1; i++) 
         {
             nombres name = tablero.get(i);
             int puntos = piezas.get(name);
