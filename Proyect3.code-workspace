@@ -1,0 +1,31 @@
+{
+	"folders": [
+		{
+			"path": "JavaProyects/Proyect3"
+		},
+		{
+			"path": "JavaProyects/Proyecto1"
+		},
+		{
+			"path": "JavaProyects/Proyecto2"
+		},
+		{
+			"path": "JavaProyects/Proyect_TryCatch"
+		},
+		{
+			"path": "JavaProyects/LecturaFicheros"
+		},
+		{
+			"path": "JavaProyects/LecturaAlumnos_JorgeTapia"
+		},
+		{
+			"path": "JavaProyects/LogCutre"
+		}
+	],
+	"settings": {
+		"java.project.referencedLibraries": [
+			"lib/**/*.jar",
+			"LogCutre.jar"
+		]
+	}
+}

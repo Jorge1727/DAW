@@ -2,7 +2,7 @@ package Colecciones.EjerClassroom.Ej17_18;
 
 import java.util.ArrayList;
 
-public class Carrito 
+public class Carrito  
 {
     //Atributos
     ArrayList<Elemento> carrito;
@@ -43,7 +43,7 @@ public class Carrito
 
         for (Elemento elemento : carrito) 
         {
-            int cantidad = elemento.getCantidad();    
+            int cantidad = elemento.getCantidad();
             total += cantidad;
         }
 

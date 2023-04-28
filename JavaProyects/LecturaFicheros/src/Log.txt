@@ -1,0 +1,14 @@
+28/04/2023 13:48:31 - INFORMACION : Se ha escrito: Es un fichero
+28/04/2023 13:48:31 - INFORMACION : Se ha escrito: 
+28/04/2023 13:48:31 - INFORMACION : Se ha escrito:     para abrirlo
+28/04/2023 13:48:31 - INFORMACION : Se ha escrito: 
+28/04/2023 13:48:31 - INFORMACION : Se ha escrito: Con su ruta respectiva
+28/04/2023 13:48:31 - INFORMACION : Se ha escrito: 
+28/04/2023 13:48:31 - INFORMACION : Se ha escrito: src/recursos/fichero.txt
+28/04/2023 13:48:46 - INFORMACION : Se ha escrito: Es un fichero
+28/04/2023 13:48:46 - INFORMACION : Se ha escrito: 
+28/04/2023 13:48:46 - INFORMACION : Se ha escrito:     para abrirlo
+28/04/2023 13:48:46 - INFORMACION : Se ha escrito: 
+28/04/2023 13:48:46 - INFORMACION : Se ha escrito: Con su ruta respectiva
+28/04/2023 13:48:46 - INFORMACION : Se ha escrito: 
+28/04/2023 13:48:46 - INFORMACION : Se ha escrito: src/recursos/fichero.txt

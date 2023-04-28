@@ -19,10 +19,28 @@ public abstract class Personajes
         this.nombre = nombre;
         this.nombreCiudad = nombreCiudad;
         this.fechaHoraCreacion = LocalDateTime.now();
+
+        cod++;
     }
 
     //Metodos
     public abstract String mostrarInformacion();
+
+    public int getCod() {
+        return cod;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public String getNombreCiudad() {
+        return nombreCiudad;
+    }
+
+    public LocalDateTime getFechaHoraCreacion() {
+        return fechaHoraCreacion;
+    }
 
 
     
