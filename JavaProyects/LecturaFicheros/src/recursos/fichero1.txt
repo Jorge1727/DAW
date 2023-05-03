@@ -1,7 +1,0 @@
-Es un fichero
-
-    para abrirlo
-
-Con su ruta respectiva
-
-src/recursos/fichero.txt
