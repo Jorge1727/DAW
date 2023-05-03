@@ -1,7 +1,5 @@
 package Matrix.Personajes;
-
 import java.util.ArrayList;
-
 public class PersonasGenericas extends Personajes
 {
     //Atributos
@@ -13,14 +11,26 @@ public class PersonasGenericas extends Personajes
         super(nombre, nombreCiudad);
         this.probabilidadDeMorir = probabilidadDeMorir;
     }
-
     //Metodos
-
     @Override
     public String mostrarInformacion()
     {
-        
-        return 
+        return "||" + getNombre() + ", Ciudad: " + getNombreCiudad() + ", Probablidiad Morir: " + this.probabilidadDeMorir;
+    }
+
+    @Override
+    public String toString() {
+        return "| P";
+    }
+
+    public int getProbabilidadDeMorir() {
+        return probabilidadDeMorir;
+    }
+
+    public void setProbabilidadDeMorir(int probabilidadDeMorir) 
+    {
+        this.probabilidadDeMorir = probabilidadDeMorir;
+
     }
 
     @Override
