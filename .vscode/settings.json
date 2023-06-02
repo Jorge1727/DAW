@@ -1,6 +1,7 @@
 {
     "java.project.sourcePaths": [
-        "PrimerasPracticas"
+        "PrimerasPracticas",
+        "Examenes",
     ],
     "java.debug.settings.onBuildFailureProceed": true,
     "java.dependency.packagePresentation": "flat"

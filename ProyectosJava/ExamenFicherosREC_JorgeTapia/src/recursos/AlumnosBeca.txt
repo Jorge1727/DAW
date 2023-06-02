@@ -1,0 +1,11 @@
+**********Alumnos beca:
+
+Carlos Ramirez: nota{Gramatica=7.5, Vocabulario=9.0, Ingles=8.0}
+Carlos Ramirez: nota{Gramatica=7.5, Vocabulario=9.0, Ingles=8.0}
+Marta Lopez: nota{Gramatica=9.0, Vocabulario=8.5, Ingles=9.5}
+Marta Lopez: nota{Gramatica=9.0, Vocabulario=8.5, Ingles=9.5}
+Alfonso Lopez: nota{Gramatica=10.0, Vocabulario=8.5, Ingles=10.0}
+Alfonso Lopez: nota{Gramatica=10.0, Vocabulario=8.5, Ingles=10.0}
+Sergio García: nota{Anatomia=7.0, Gramatica=5.5, Vocabulario=4.0, Ingles=9.0, Biologia=6.5}
+Pedro Gomez: nota{Matematicas=7.0, Quimica=8.0, Fisica=6.5, Gramatica=8.5, Vocabulario=9.5, Ingles=9.1}
+Pedro Gomez: nota{Matematicas=7.0, Quimica=8.0, Fisica=6.5, Gramatica=8.5, Vocabulario=9.5, Ingles=9.1}

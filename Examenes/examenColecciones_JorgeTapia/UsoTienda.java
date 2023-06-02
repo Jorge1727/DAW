@@ -1,5 +1,9 @@
 package examenColecciones_JorgeTapia;
 
+import examenColecciones_JorgeTapia.Tienda.CarritoCompra;
+import examenColecciones_JorgeTapia.Tienda.Producto;
+import examenColecciones_JorgeTapia.Tienda.Tienda;
+
 public class UsoTienda {
     
     public static void main(String[] args) {
@@ -15,73 +19,73 @@ public class UsoTienda {
             tienda.getDescuentoPorCategoria().insertar("Hogar", 5);
     
             
-            // System.out.println("---- DESCUENTOS FIJADOS ----");
-            // System.out.println(tienda.getDescuentoPorCategoria().mostrarDescuentos());
-            // System.out.println();
-            // // Creamos los productos y los añadimos a la tienda
-            // Producto p1 = new Producto("Televisor Samsung", "Televisor de 50 pulgadas", 500.0, "Electrónica");
-            // tienda.insertarProductoAlmacen(p1);
+            System.out.println("---- DESCUENTOS FIJADOS ----");
+            System.out.println(tienda.getDescuentoPorCategoria().mostrarDescuentos());
+            System.out.println();
+            // Creamos los productos y los añadimos a la tienda
+            Producto p1 = new Producto("Televisor Samsung", "Televisor de 50 pulgadas", 500.0, "Electrónica");
+            tienda.insertarProductoAlmacen(p1);
             
-            // Producto p2 = new Producto( "Zapatillas Nike", "Zapatillas deportivas para hombre", 80.0, "Deportes");
-            // tienda.insertarProductoAlmacen(p2);
+            Producto p2 = new Producto( "Zapatillas Nike", "Zapatillas deportivas para hombre", 80.0, "Deportes");
+            tienda.insertarProductoAlmacen(p2);
             
-            // Producto pRepetido = new Producto( "Zapatillas Nike", "Zapatillas deportivas para hombre", 80.0, "Deportes");
-            // tienda.insertarProductoAlmacen(pRepetido);
+            Producto pRepetido = new Producto( "Zapatillas Nike", "Zapatillas deportivas para hombre", 80.0, "Deportes");
+            tienda.insertarProductoAlmacen(pRepetido);
     
-            // Producto p3 = new Producto( "Sofá cama", "Sofá cama de dos plazas", 300.0, "Hogar");
-            // tienda.insertarProductoAlmacen(p3);
+            Producto p3 = new Producto( "Sofá cama", "Sofá cama de dos plazas", 300.0, "Hogar");
+            tienda.insertarProductoAlmacen(p3);
             
-            // Producto p4 = new Producto( "Cámara Canon", "Cámara réflex digital", 600.0, "Electrónica");
-            // tienda.insertarProductoAlmacen(p4);
+            Producto p4 = new Producto( "Cámara Canon", "Cámara réflex digital", 600.0, "Electrónica");
+            tienda.insertarProductoAlmacen(p4);
             
-            // Producto p5 = new Producto( "Mesa de comedor", "Mesa de comedor extensible para 6 personas", 200.0, "Hogar");
-            // tienda.insertarProductoAlmacen(p5);
+            Producto p5 = new Producto( "Mesa de comedor", "Mesa de comedor extensible para 6 personas", 200.0, "Hogar");
+            tienda.insertarProductoAlmacen(p5);
             
-            // Producto p6 = new Producto("Pantalones vaqueros", "Pantalones vaqueros para mujer", 50.0, "Moda");
-            // tienda.insertarProductoAlmacen(p6);
+            Producto p6 = new Producto("Pantalones vaqueros", "Pantalones vaqueros para mujer", 50.0, "Moda");
+            tienda.insertarProductoAlmacen(p6);
             
-            // Producto p7 = new Producto("Camiseta Adidas", "Camiseta de deporte para hombre", 30.0, "Deportes");
-            // tienda.insertarProductoAlmacen(p7);
+            Producto p7 = new Producto("Camiseta Adidas", "Camiseta de deporte para hombre", 30.0, "Deportes");
+            tienda.insertarProductoAlmacen(p7);
             
-            // Producto p8 = new Producto( "Frigorífico Bosch", "Frigorífico de dos puertas", 800.0, "Hogar");
-            // tienda.insertarProductoAlmacen(p8);
+            Producto p8 = new Producto( "Frigorífico Bosch", "Frigorífico de dos puertas", 800.0, "Hogar");
+            tienda.insertarProductoAlmacen(p8);
             
-            // Producto p9 = new Producto("Smartphone Xiaomi", "Smartphone con pantalla de 6 pulgadas", 300.0, "Electrónica");
-            // tienda.insertarProductoAlmacen(p9);
+            Producto p9 = new Producto("Smartphone Xiaomi", "Smartphone con pantalla de 6 pulgadas", 300.0, "Electrónica");
+            tienda.insertarProductoAlmacen(p9);
             
-            // Producto p10 = new Producto("Abrigo de lana", "Abrigo de lana para mujer", 100.0, "Moda");
-            // tienda.insertarProductoAlmacen(p10);
+            Producto p10 = new Producto("Abrigo de lana", "Abrigo de lana para mujer", 100.0, "Moda");
+            tienda.insertarProductoAlmacen(p10);
             
     
-            // //Mostramos los productos
-            // System.out.println("---- Productos por Nombre ---");
-            // System.out.println(tienda.mostrarProductosAlmacenPorNombre());
+            //Mostramos los productos
+            System.out.println("---- Productos por Nombre ---");
+            System.out.println(tienda.mostrarProductosAlmacenPorNombre());
     
-            // System.out.println("---- Productos por Id ---");
-            // System.out.println(tienda.mostrarProductosAlmacenPorId());
+            System.out.println("---- Productos por Id ---");
+            System.out.println(tienda.mostrarProductosAlmacenPorId());
     
-            // // Añadimos algunos productos al carrito de la compra
-            // CarritoCompra carrito = tienda.getCarritoDeCompra();
+            // Añadimos algunos productos al carrito de la compra
+            CarritoCompra carrito = tienda.getCarrito();
             
-            // carrito.insertar(p1);
-            // carrito.insertar(p7);
-            // carrito.insertar(p3);
-            // carrito.insertar(p7);
-            // carrito.insertar(p1);
-            // carrito.insertar(p8);
+            carrito.insertar(p1);
+            carrito.insertar(p7);
+            carrito.insertar(p3);
+            carrito.insertar(p7);
+            carrito.insertar(p1);
+            carrito.insertar(p8);
     
-            // System.out.println("---- Productos en el carrito de compra por Nombre---");
-            // System.out.println(carrito.mostrarPorNombre());
+            System.out.println("---- Productos en el carrito de compra por Nombre---");
+            System.out.println(carrito.mostrarPorNombre());
     
-            //  System.out.println("---- Eliminamos productos del carrito de compra ---");
-            // carrito.eliminar(1);
-            // carrito.eliminar(5);
-            // carrito.eliminar(8);
+             System.out.println("---- Eliminamos productos del carrito de compra ---");
+            carrito.eliminar(1);
+            carrito.eliminar(5);
+            carrito.eliminar(8);
     
-            // System.out.println("---- Productos en el carrito de compra por código---");
-            // System.out.println(carrito.mostrarPorCodigo());
+            System.out.println("---- Productos en el carrito de compra por código---");
+            System.out.println(carrito.mostrarPorCodigo());
            
-            // System.out.println("---- TOTAL ------");
+            System.out.println("---- TOTAL ------");
             // System.out.println("Total: "+ tienda.obtenerCuentaTotal() + " €");
     
         }

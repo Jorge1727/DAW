@@ -1,18 +1,25 @@
-package examenColecciones_JorgeTapia;
+package examenColecciones_JorgeTapia.Tienda;
 
 import java.util.ArrayList;
+
+import examenColecciones_JorgeTapia.Comparador.OrdenaPorCodigo;
+import examenColecciones_JorgeTapia.Comparador.OrdenaPorNombre;
 
 public class CarritoCompra 
 {
     //Atributos
-    ArrayList<Producto> carrito;
+    private ArrayList<Producto> carrito;
 
     public CarritoCompra() 
     {
-        carrito = new ArrayList<>();
+        this.carrito = new ArrayList<>();
     }
 
     //metodos
+    public ArrayList<Producto> getCarrito() {
+        return carrito;
+    }
+
     public boolean insertar(Producto elem)
     {
         boolean resultado = carrito.add(elem);
@@ -22,8 +29,6 @@ public class CarritoCompra
 
     public boolean eliminar(int id)
     {
-        boolean resultado = false;
-
         for (int i = 0; i < carrito.size(); i++) 
         {
             int numid = carrito.get(i).getId();
@@ -31,28 +36,30 @@ public class CarritoCompra
             if(numid == id)
             {
                 carrito.remove(carrito.get(i));
-                resultado = true;
+                return true;
             }
         }
 
-        return resultado;
+        return false;
     }
 
     public void limpiarCarrito()
     {
-        for (int i = 0; i < carrito.size(); i++) 
-        {
-            carrito.remove(i);   
-        }
+        this.carrito = new ArrayList<>();
     }
 
     public String mostrarPorCodigo()
     {
+        OrdenaPorCodigo ordenaPorCodigo = new OrdenaPorCodigo();
+        ArrayList<Producto> copia = new ArrayList<>(carrito);
+
+        copia.sort(ordenaPorCodigo);
+
         String resultado = "";
 
-        for (Producto producto : carrito) 
+        for (int i = 0; i < copia.size(); i++) 
         {
-            resultado += producto.toString() + "\n";
+            resultado += copia.get(i) + "\n";    
         }
 
         return resultado;
@@ -61,11 +68,16 @@ public class CarritoCompra
 
     public String mostrarPorNombre()
     {
+        OrdenaPorNombre ordenaPorNombre = new OrdenaPorNombre();
+        ArrayList<Producto> copia = new ArrayList<>(carrito);
+
+        copia.sort(ordenaPorNombre);
+
         String resultado = "";
 
-        for (Producto producto : carrito) 
+        for (int i = 0; i < copia.size(); i++) 
         {
-            resultado += producto.toString() + "\n";
+            resultado += copia.get(i) + "\n";    
         }
 
         return resultado;

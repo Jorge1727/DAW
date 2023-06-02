@@ -1,4 +1,4 @@
-package examenColecciones_JorgeTapia;
+package examenColecciones_JorgeTapia.Tienda;
 
 public interface Tienda_I {
 

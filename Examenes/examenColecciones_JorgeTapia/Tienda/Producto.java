@@ -1,11 +1,11 @@
-package examenColecciones_JorgeTapia;
+package examenColecciones_JorgeTapia.Tienda;
 
 public class Producto 
 {
     //Atributos
-    public int id = 1;
+    public static int num_id = 1;
 
-    private int num_id;
+    private int id;
     private String nombreProducto;
     private String descripcion;
     private double precio;
@@ -13,13 +13,13 @@ public class Producto
 
     public Producto(String nombreProducto, String descripcion, double precio, String categoria) 
     {
-        this.num_id = id;
+        this.id = num_id;
         this.nombreProducto = nombreProducto;
         this.descripcion = descripcion;
         this.precio = precio;
         this.categoria = categoria;
 
-        id++;
+        num_id++;
     }
 
     public String getNombreProducto() {

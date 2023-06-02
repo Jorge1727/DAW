@@ -1,0 +1,53 @@
+
+******* Todos los clientes:
+
+
+Cliente [codigo=789
+nombre=Ana Martinez
+direccion=Plaza 789
+email=anamartinez@example.com]
+
+Cliente [codigo=4
+nombre=Ana Martínez
+direccion=Calle Alameda 321, Sevilla
+email=anamartinez@example.com]
+
+Cliente [codigo=5
+nombre=Javier Fernández
+direccion=Paseo del Prado 987, Madrid
+email=javierfernandez@example.com]
+Error, cliente repetidoError, cliente repetido
+Cliente [codigo=1
+nombre=Juan Pérez
+direccion=Calle Mayor 123, Madrid
+email=juanperez@example.com]
+
+Cliente [codigo=456
+nombre=Maria Rodriguez
+direccion=Avenida 456
+email=mariarodriguez@example.com]
+
+Cliente [codigo=2
+nombre=María García
+direccion=Avenida Primavera 456, Barcelona
+email=mariagarcia@example.com]
+
+Cliente [codigo=321
+nombre=Pablo Gomez
+direccion=Carretera 321
+email=pablogomez@example.com]
+
+Cliente [codigo=3
+nombre=Pedro López
+direccion=Plaza España 789, Valencia
+email=pedrolopez@example.com]
+
+Cliente [codigo=654
+nombre=Sofia Fernandez
+direccion=Travesia 654
+email=sofiafernandez@example.com]
+
+
+******* facturacion clientes:
+
+[Cliente: Ana Martinez Cod Producto:[Linea [idLinea=1, codigoProducto=2, cantidad=2], Linea [idLinea=2, codigoProducto=6, cantidad=1], Linea [idLinea=3, codigoProducto=13, cantidad=1]], Cliente: Juan Perez Cod Producto:[Linea [idLinea=1, codigoProducto=1, cantidad=2], Linea [idLinea=2, codigoProducto=4, cantidad=1], Linea [idLinea=3, codigoProducto=10, cantidad=4]], Cliente: Juan Perez Cod Producto:[Linea [idLinea=1, codigoProducto=1, cantidad=2], Linea [idLinea=2, codigoProducto=4, cantidad=1], Linea [idLinea=3, codigoProducto=10, cantidad=4]], Cliente: Juan Pérez Cod Producto:[Linea [idLinea=1, codigoProducto=5, cantidad=1], Linea [idLinea=2, codigoProducto=9, cantidad=10], Linea [idLinea=3, codigoProducto=11, cantidad=2]], Cliente: Maria Rodriguez Cod Producto:[Linea [idLinea=1, codigoProducto=3, cantidad=1], Linea [idLinea=2, codigoProducto=7, cantidad=2], Linea [idLinea=3, codigoProducto=11, cantidad=3]], Cliente: Pablo Gomez Cod Producto:[Linea [idLinea=1, codigoProducto=8, cantidad=3], Linea [idLinea=2, codigoProducto=12, cantidad=1], Linea [idLinea=3, codigoProducto=14, cantidad=2]], Cliente: Sofia Fernandez Cod Producto:[Linea [idLinea=1, codigoProducto=5, cantidad=1], Linea [idLinea=2, codigoProducto=9, cantidad=10], Linea [idLinea=3, codigoProducto=11, cantidad=2]]]

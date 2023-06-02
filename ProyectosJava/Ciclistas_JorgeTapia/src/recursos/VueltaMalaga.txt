@@ -1,0 +1,104 @@
+
+******* Nombre de la carrera:
+
+Vuelta a Malaga
+
+******* Ciclistas participantes:
+
+[
+Corredor [dorsal=1 nombre: Chris Froome, tiempo=0], 
+Corredor [dorsal=2 nombre: Egan Bernal, tiempo=0], 
+Corredor [dorsal=3 nombre: Geraint Thomas, tiempo=0], 
+Corredor [dorsal=4 nombre: Richard Carapaz, tiempo=0], 
+Corredor [dorsal=5 nombre: Michal Kwiatkowski, tiempo=0], 
+Corredor [dorsal=6 nombre: Gianni Moscon, tiempo=0], 
+Corredor [dorsal=7 nombre: Luke Rowe, tiempo=0], 
+Corredor [dorsal=8 nombre: Tao Geoghegan Hart, tiempo=0], 
+Corredor [dorsal=9 nombre: Julian Alaphilippe, tiempo=0], 
+Corredor [dorsal=10 nombre: Mark Cavendish, tiempo=0], 
+Corredor [dorsal=11 nombre: Remco Evenepoel, tiempo=0], 
+Corredor [dorsal=12 nombre: Zdenek Stybar, tiempo=0], 
+Corredor [dorsal=13 nombre: Kasper Asgreen, tiempo=0], 
+Corredor [dorsal=14 nombre: Fabio Jakobsen, tiempo=0], 
+Corredor [dorsal=15 nombre: Yves Lampaert, tiempo=0], 
+Corredor [dorsal=16 nombre: Bob Jungels, tiempo=0], 
+Corredor [dorsal=17 nombre: Peter Sagan, tiempo=0], 
+Corredor [dorsal=18 nombre: Emmanuel Buchmann, tiempo=0], 
+Corredor [dorsal=19 nombre: Lennard K�mna, tiempo=0], 
+Corredor [dorsal=20 nombre: Emanuel Buchmann, tiempo=0], 
+Corredor [dorsal=21 nombre: Felix Gro�schartner, tiempo=0], 
+Corredor [dorsal=22 nombre: Wilco Kelderman, tiempo=0], 
+Corredor [dorsal=23 nombre: Giovanni Aleotti, tiempo=0], 
+Corredor [dorsal=24 nombre: Maximilian Schachmann, tiempo=0], 
+Corredor [dorsal=25 nombre: Ben O'Connor, tiempo=0], 
+Corredor [dorsal=26 nombre: Aur�lien Paret-Peintre, tiempo=0], 
+Corredor [dorsal=27 nombre: Bob Jungels, tiempo=0], 
+Corredor [dorsal=28 nombre: Clement Champoussin, tiempo=0], 
+Corredor [dorsal=29 nombre: Stan Dewulf, tiempo=0], 
+Corredor [dorsal=30 nombre: Caleb Ewan, tiempo=0], 
+Corredor [dorsal=31 nombre: John Degenkolb, tiempo=0], 
+Corredor [dorsal=32 nombre: Philippe Gilbert, tiempo=0], 
+Corredor [dorsal=33 nombre: Thomas De Gendt, tiempo=0], 
+Corredor [dorsal=34 nombre: Tim Wellens, tiempo=0], 
+Corredor [dorsal=35 nombre: Rigoberto Uran, tiempo=0], 
+Corredor [dorsal=36 nombre: Michael Woods, tiempo=0], 
+Corredor [dorsal=37 nombre: Magnus Cort, tiempo=0], 
+Corredor [dorsal=38 nombre: Sergio Higuita, tiempo=0], 
+Corredor [dorsal=39 nombre: Lachlan Morton, tiempo=0]]
+
+******* Clasificacion final:
+
+[
+Corredor [dorsal=1 nombre: Chris Froome, tiempo=50], 
+Corredor [dorsal=10 nombre: Mark Cavendish, tiempo=51], 
+Corredor [dorsal=35 nombre: Rigoberto Uran, tiempo=53], 
+Corredor [dorsal=7 nombre: Luke Rowe, tiempo=57], 
+Corredor [dorsal=16 nombre: Bob Jungels, tiempo=60], 
+Corredor [dorsal=21 nombre: Felix Gro�schartner, tiempo=60], 
+Corredor [dorsal=28 nombre: Clement Champoussin, tiempo=62], 
+Corredor [dorsal=3 nombre: Geraint Thomas, tiempo=63], 
+Corredor [dorsal=29 nombre: Stan Dewulf, tiempo=63], 
+Corredor [dorsal=9 nombre: Julian Alaphilippe, tiempo=65], 
+Corredor [dorsal=18 nombre: Emmanuel Buchmann, tiempo=65], 
+Corredor [dorsal=12 nombre: Zdenek Stybar, tiempo=66], 
+Corredor [dorsal=23 nombre: Giovanni Aleotti, tiempo=66], 
+Corredor [dorsal=5 nombre: Michal Kwiatkowski, tiempo=67], 
+Corredor [dorsal=19 nombre: Lennard K�mna, tiempo=67], 
+Corredor [dorsal=33 nombre: Thomas De Gendt, tiempo=68], 
+Corredor [dorsal=34 nombre: Tim Wellens, tiempo=68], 
+Corredor [dorsal=15 nombre: Yves Lampaert, tiempo=69], 
+Corredor [dorsal=17 nombre: Peter Sagan, tiempo=69], 
+Corredor [dorsal=38 nombre: Sergio Higuita, tiempo=69], 
+Corredor [dorsal=11 nombre: Remco Evenepoel, tiempo=71], 
+Corredor [dorsal=4 nombre: Richard Carapaz, tiempo=72], 
+Corredor [dorsal=20 nombre: Emanuel Buchmann, tiempo=74], 
+Corredor [dorsal=22 nombre: Wilco Kelderman, tiempo=74], 
+Corredor [dorsal=13 nombre: Kasper Asgreen, tiempo=76], 
+Corredor [dorsal=2 nombre: Egan Bernal, tiempo=77], 
+Corredor [dorsal=6 nombre: Gianni Moscon, tiempo=77], 
+Corredor [dorsal=8 nombre: Tao Geoghegan Hart, tiempo=77], 
+Corredor [dorsal=14 nombre: Fabio Jakobsen, tiempo=77], 
+Corredor [dorsal=24 nombre: Maximilian Schachmann, tiempo=77], 
+Corredor [dorsal=25 nombre: Ben O'Connor, tiempo=77], 
+Corredor [dorsal=26 nombre: Aur�lien Paret-Peintre, tiempo=77], 
+Corredor [dorsal=27 nombre: Bob Jungels, tiempo=77], 
+Corredor [dorsal=30 nombre: Caleb Ewan, tiempo=77], 
+Corredor [dorsal=31 nombre: John Degenkolb, tiempo=77], 
+Corredor [dorsal=32 nombre: Philippe Gilbert, tiempo=77], 
+Corredor [dorsal=36 nombre: Michael Woods, tiempo=77], 
+Corredor [dorsal=37 nombre: Magnus Cort, tiempo=77], 
+Corredor [dorsal=39 nombre: Lachlan Morton, tiempo=77]]
+
+******* PODIUM:
+
+1: 
+Corredor [dorsal=1 nombre: Chris Froome, tiempo=50]
+2: 
+Corredor [dorsal=10 nombre: Mark Cavendish, tiempo=51]
+3: 
+Corredor [dorsal=35 nombre: Rigoberto Uran, tiempo=53]
+
+
+******* Posicion del corredor Wilco Kelderman(BOHA) Dorsal: 22 :
+
+23
